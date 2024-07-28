@@ -27,8 +27,14 @@ Por último, dentro del update se llaman todas as funciones de las serpientes (p
 
 # Imágenes
 
-![Captura de pantalla (16)](https://github.com/user-attachments/assets/979b8d3b-32dc-4555-b901-f42b6ded00e1)
-![Captura de pantalla (13)](https://github.com/user-attachments/assets/b562940a-0dff-4afa-ad70-e799139a4509)
+<div align="center">
+  <img src="Captura de pantalla (13).png" alt="Versión Multijugador" width="1200">
+</div>
+
+<div align="center">
+  <img src="Captura de pantalla (16).png" alt="Versión Un Jugador" width="1200">
+</div>
+   
 
 
 Ese sería todo el proyecto, obviamente no es perfecto, pero sí le dediqué mucho esfuerzo y me siento satisfecho con los resultados.
