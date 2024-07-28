@@ -1,6 +1,7 @@
 # Python-in-Phyton
 Este proyecto se basa en demostrar que al igual que python, los videojuegos son un campo super amplio. La idea es usar una biblioteca que no está diseñada para juegos, sino para interfaces sencillas y aprendizaje de niños como es Turtle, para crear un juego clásico en sus dos versiones y tener ambas en gitHub. Antes de empezar a dar una breve explicación, aclara que los comentarios solo están disponibles en la versión para un jugador (el primer commit), en la versión multijugador no son necesarios pues son practicamente las mismas funciones. También tener en cuenta que la explicación dada a continuación se basa en la versión final multijugador.
 
+# Creación de clases, Ventana y Funcioens de Reinicio
 Para empezar y utilizar clases en el proyecto, creé la serpiente y la comida como clases, cada una tiene una o más propiedades tipo turtle como es la cabeza y la lista de segmentos en el caso de la serpiente, así como propiedades características de Turtle como son la forma, el color o la velocidad. A la hora de crear el juego son necesarias varias cosas, entre ellas una ventana donde colocar y mover las entidades la cual denominé "window" y un cronómetro para añadir tiempo límite al juego, este último se manifestará mediante un Turtle llamado "contador" que será algo así como su representación visual.
 Se crean dos serpientes y una fruta y se declaran ciertas funciones que utilizaremos despues, tales como:
 
@@ -8,8 +9,10 @@ Se crean dos serpientes y una fruta y se declaran ciertas funciones que utilizar
 -reiniciar: Llama a la función reiniciarSerpiente para cada uno de los jugadores.
 -ganar: Detiene todo el movimiento en el juego y muestra el mensaje de victoria del ganador, también tiene un pequeño truco para casos de empate.
 
+# Movimiento
 Luego de esto creé funciones para la dirección y control de las serpientes, las funciones de dirección están validadas para que no se pueda ir en dirección contraria repentinamente (si vas arriba no puedas ir abajo directo, sino que tienes que doblar antes). Luego está la sección de movimiento, dependiento de la dirección aumenta o disminuye valores en las coordenadas X y Y para dezplazar la cabeza de la serpiente. Por último tenemos una serie de listeners con las teclas "wasd" para el jugador 2 y las flechas del teclado para el jugador 1, cada uno llama respectivamente a las funciones de dirección para cada serpiente.
 
+# Otros detalles
 El aumento de marcador no tiene complejidad, dependiendo de la serpiente aumentamos su puntuación y actualizamos el texto de la entidad Turtle relacionada a la puntuación de dicha serpiente.
 
 La colisión con la comida se basa en que cuando la distancia de una cabeza a la comida es menor de 28 pixeles, esta se teletrasporta a otra ubicación random (utilizando la biblioteca Random) y se aumentan los puntos de la serpiente en cuestión. Además se crea y añade un segmento a la lista de segmentos de la serpiente.
@@ -21,5 +24,11 @@ La colisión con los bordes no tiene nada del otro mundo, si la cabeza pasa de c
 Todo el tema del tiempo es algo complejo, pero en pocas palabras es una verificación en tiempo real para ir decrementando el cronómetro, pues la idea original era usar un semáforo o un timer, pero creaba conflicto con la función update de Turtle.
 
 Por último, dentro del update se llaman todas as funciones de las serpientes (para ambas) y al final se hace un time sleep en la variable posponer para que se pueda ver el movimiento, de lo contrario sería demasiado rápido.
+
+# Imágenes
+
+![Captura de pantalla (16)](https://github.com/user-attachments/assets/979b8d3b-32dc-4555-b901-f42b6ded00e1)
+![Captura de pantalla (13)](https://github.com/user-attachments/assets/b562940a-0dff-4afa-ad70-e799139a4509)
+
 
 Ese sería todo el proyecto, obviamente no es perfecto, pero sí le dediqué mucho esfuerzo y me siento satisfecho con los resultados.
